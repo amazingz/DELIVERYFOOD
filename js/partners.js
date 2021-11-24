@@ -1,7 +1,33 @@
-fetch('./db/partners.json')
+const renderItems = (data) => {
+  console.log(data);
+}
+
+fetch('https://food-delivery-3c5d5-default-rtdb.europe-west1.firebasedatabase.app/db/partners.json')
+  .then((response) => response.json())
+    .then((data) => {renderItems(data)})
+      .catch((error) => {
+        console.log(error);
+      })
+
+fetch('./db/food-band.json')
+  .then((response) => response.json())
+    .then((data) => {console.log(data)} )
+
+fetch('./db/pizza-burger.json')
+.then((response) => response.json())
+  .then((data) => {console.log(data)})
+
+fetch('./db/pizza-plus.json')
+  .then((response) => response.json())
+    .then((data) => {console.log(data)})
+    
+ fetch('./db/tanuki.json')
+  .then((response) => response.json())
+    .then((data) => {console.log(data)})
+
+fetch('./db/gusi-lebedi.json')
   .then((response) => response.json())
     .then((data) => {console.log(data);})
-
 
 
 // const array = [11, 32, 432, 123, 765]
